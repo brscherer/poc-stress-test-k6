@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/server.js"
+    "dev": "nodemon src/server.js",
+    "test": "k6 run src/stress-test.js"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +13,7 @@
   "packageManager": "pnpm@10.12.4",
   "dependencies": {
     "express": "^5.1.0",
+    "k6": "^0.0.0",
     "nodemon": "^3.1.10"
   }
 }
