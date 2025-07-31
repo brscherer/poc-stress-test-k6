@@ -4,6 +4,11 @@ const port = process.env.PORT || 3000;
 
 app.use(express.json());
 
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.url}`);
+  next();
+});
+
 let todos = [
   { id: 1, title: "Buy groceries", completed: false },
   { id: 2, title: "Do laundry", completed: true },
